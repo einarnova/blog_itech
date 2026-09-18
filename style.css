@@ -1,0 +1,912 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Reset básico y Tipografía */
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    border-radius: 8px;
+}
+
+/* Layout Principal a pantalla completa con CSS Grid */
+.page-body {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 80px 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    background-color: #ffffff;
+}
+
+/* Header (Alto de 80px - Fondo Blanco) */
+.site-header {
+    grid-area: header;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo {
+    height: 26px;
+    width: auto;
+    display: block;
+}
+
+/* Menú de Navegación del Header (Compacto y Centrado) */
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #475569;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.nav-link:hover,
+.nav-item:hover>.nav-link {
+    background-color: #0080FF;
+    color: #ffffff;
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.nav-item.has-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Submenú Desplegable Centrado y Compacto */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: #ffffff;
+    min-width: 230px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 6px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 1100;
+}
+
+.nav-item.has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-link {
+    display: block;
+    padding: 11px 20px;
+    color: #1e293b;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-link:hover {
+    background-color: #f0f7ff;
+    color: #0080FF;
+}
+
+/* Botón de WhatsApp (Acciones del Header) */
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
+.whatsapp-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Aside / Sidebar Container */
+.sidebar {
+    grid-area: sidebar;
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 36px 30px;
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    overflow-y: auto;
+}
+
+/* Elemento para Anuncios / Publicidad en el Sidebar */
+.sidebar-ad {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 24px;
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar-ad:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 128, 255, 0.1);
+}
+
+.ad-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background-color: #f1f5f9;
+    color: #64748b;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.ad-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.ad-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+    margin: 0 0 6px 0;
+}
+
+.ad-text {
+    font-size: 0.8rem;
+    color: #475569;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+}
+
+.ad-button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #0080FF 0%, #0066cc 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ad-button:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+/* Banner de Título del Menú (#0080FF) */
+.sidebar-title {
+    width: 100%;
+    background: linear-gradient(135deg, #0080FF 0%, #0066cc 100%);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 25px 16px;
+    margin: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 128, 255, 0.2);
+}
+
+.sidebar-title::before {
+    content: "☰";
+    font-size: 1.2rem;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.sidebar-title::after {
+    content: "∨";
+    font-size: 0.75rem;
+    margin-left: auto;
+}
+
+/* Caja de Navegación */
+.sidebar-nav {
+    width: 100%;
+    border: 1px solid #b3d9ff;
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 128, 255, 0.05);
+}
+
+/* Lista del Sidebar */
+.sidebar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+/* Ítems con separador horizontal */
+.sidebar-item {
+    border-bottom: 1px solid #f0f7ff;
+}
+
+.sidebar-item:last-child {
+    border-bottom: none;
+}
+
+/* Enlaces del Sidebar con Flecha Derecha */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #111111;
+    text-decoration: none;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link::after {
+    content: "›";
+    font-size: 1.1rem;
+    color: #0080FF;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background-color: #f0f7ff;
+    color: #0080FF;
+}
+
+.sidebar-link:hover::after {
+    color: #0080FF;
+    transform: translateX(3px);
+}
+
+/* Main (Lado derecho - resto de la pantalla) */
+.main-content {
+    grid-area: main;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+/* Secciones y disposición de artículos en 3 columnas */
+section,
+.section-container {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+    scroll-margin-top: 80px;
+    box-sizing: border-box;
+}
+
+/* Títulos y párrafos descriptivos ocupan todo el ancho de la sección */
+.section-title,
+.section-text,
+.section-subtitle,
+.section-summary {
+    grid-column: 1 / -1;
+}
+
+.highlight-text {
+    color: #0080FF;
+    font-weight: 700;
+}
+
+/* Tarjetas de artículos (Columnas) */
+.article-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.article-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #f0f7ff;
+    margin-bottom: 12px;
+}
+
+.article-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #0080FF;
+}
+
+.article-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #334155;
+}
+
+/* -------------------------------------------------------------
+   ESTILOS ESPECÍFICOS: SECCIÓN DIAGNÓSTICO (PALETA #0080FF Y BLANCO)
+   ------------------------------------------------------------- */
+#diagnostico.section-container,
+#repuestos.section-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 24px;
+    scroll-margin-top: 80px;
+    box-sizing: border-box;
+}
+
+#diagnostico .diagnostico-header,
+#repuestos .diagnostico-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+section h2:not(.blog-card h2),
+.section-title,
+.diagnostico-title,
+#diagnostico .diagnostico-title,
+#repuestos .diagnostico-title {
+    font-family: 'Frutiger Next', 'Frutiger', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0080FF;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+}
+
+#diagnostico .diagnostico-intro,
+#repuestos .diagnostico-intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+#diagnostico .diagnostico-bold,
+#repuestos .diagnostico-bold {
+    font-weight: 700;
+    color: #0080FF;
+}
+
+#diagnostico .diagnostico-subtitle,
+#repuestos .diagnostico-subtitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #0080FF;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+}
+
+#diagnostico .diagnostico-cards-container,
+#repuestos .diagnostico-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* -------------------------------------------------------------
+   DISEÑO BLOG-CARD (ADAPTADO A SECCIÓN DIAGNÓSTICO Y REPUESTOS)
+   ------------------------------------------------------------- */
+#diagnostico .blog-card,
+#repuestos .blog-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    background: #ffffff;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    border: 1px solid #e2e8f0;
+    width: 100%;
+    max-width: 1155px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#diagnostico .blog-card:hover,
+#repuestos .blog-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 128, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+#diagnostico .blog-card a,
+#repuestos .blog-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#diagnostico .blog-card a:hover,
+#repuestos .blog-card a:hover {
+    color: #0080FF;
+}
+
+#diagnostico .blog-card:hover .photo,
+#repuestos .blog-card:hover .photo {
+    transform: scale(1.15) rotate(2deg);
+}
+
+#diagnostico .blog-card .meta,
+#repuestos .blog-card .meta {
+    position: relative;
+    z-index: 0;
+    height: 200px;
+    overflow: hidden;
+}
+
+#diagnostico .blog-card .photo,
+#repuestos .blog-card .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.35s ease;
+}
+
+#diagnostico .blog-card .details,
+#diagnostico .blog-card .details ul,
+#repuestos .blog-card .details,
+#repuestos .blog-card .details ul {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+
+#diagnostico .blog-card .details,
+#repuestos .blog-card .details {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    margin: auto;
+    transition: left 0.3s ease;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#diagnostico .blog-card:hover .details,
+#repuestos .blog-card:hover .details {
+    left: 0%;
+}
+
+#diagnostico .blog-card .details a,
+#repuestos .blog-card .details a {
+    text-decoration: underline dotted;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#diagnostico .blog-card .details li,
+#repuestos .blog-card .details li {
+    margin-bottom: 6px;
+}
+
+#diagnostico .blog-card .details .author::before,
+#repuestos .blog-card .details .author::before {
+    margin-right: 8px;
+    content: "📌 ";
+}
+
+#diagnostico .blog-card .details .date::before,
+#repuestos .blog-card .details .date::before {
+    margin-right: 8px;
+    content: "🏷️ ";
+}
+
+#diagnostico .blog-card .description,
+#repuestos .blog-card .description {
+    padding: 1.5rem;
+    background: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+#diagnostico .blog-card .description h1,
+#diagnostico .blog-card .description h2,
+#repuestos .blog-card .description h1,
+#repuestos .blog-card .description h2 {
+    font-family: 'Frutiger Next', 'Inter', sans-serif;
+}
+
+#diagnostico .blog-card .description h1,
+#repuestos .blog-card .description h1 {
+    line-height: 1.2;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+#diagnostico .blog-card .description h2,
+#repuestos .blog-card .description h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #0080FF;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+}
+
+#diagnostico .blog-card .description p,
+#repuestos .blog-card .description p {
+    position: relative;
+    margin: 1rem 0 0;
+    color: #334155;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+#diagnostico .blog-card .description p:first-of-type,
+#repuestos .blog-card .description p:first-of-type {
+    margin-top: 1.25rem;
+}
+
+#diagnostico .blog-card .description p:first-of-type::before,
+#repuestos .blog-card .description p:first-of-type::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background: #0080FF;
+    width: 35px;
+    top: -0.75rem;
+    border-radius: 3px;
+}
+
+@media (min-width: 640px) {
+
+    #diagnostico .blog-card,
+    #repuestos .blog-card {
+        flex-direction: row;
+        width: 100%;
+        max-width: 1155px;
+        min-height: 220px;
+    }
+
+    #diagnostico .blog-card .meta,
+    #repuestos .blog-card .meta {
+        flex-basis: 38%;
+        height: auto;
+    }
+
+    #diagnostico .blog-card .description,
+    #repuestos .blog-card .description {
+        flex-basis: 62%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #diagnostico .blog-card .description::before,
+    #repuestos .blog-card .description::before {
+        transform: skewX(-3deg);
+        content: "";
+        background: #ffffff;
+        width: 30px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    #diagnostico .blog-card.alt,
+    #repuestos .blog-card.alt {
+        flex-direction: row-reverse;
+    }
+
+    #diagnostico .blog-card.alt .description::before,
+    #repuestos .blog-card.alt .description::before {
+        left: inherit;
+        right: -10px;
+        transform: skewX(3deg);
+    }
+
+    #diagnostico .blog-card.alt .details,
+    #repuestos .blog-card.alt .details {
+        padding-left: 25px;
+    }
+}
+
+#diagnostico .diagnostico-summary,
+#repuestos .diagnostico-summary {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* -------------------------------------------------------------
+   SECCIONES CUIDADO, FALLAS Y RENDIMIENTO (DISEÑO .square CARD - 3 COLUMNAS)
+   ------------------------------------------------------------- */
+#cuidado .cuidado-grid-container,
+#fallas .fallas-grid-container,
+#rendimiento .rendimiento-grid-container {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    padding: 0 10%;
+    margin-top: 24px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+
+    #cuidado .cuidado-grid-container,
+    #fallas .fallas-grid-container,
+    #rendimiento .rendimiento-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 5%;
+    }
+
+    #cuidado .square,
+    #fallas .square,
+    #rendimiento .square {
+        width: 85%;
+    }
+}
+
+@media (max-width: 640px) {
+
+    #cuidado .cuidado-grid-container,
+    #fallas .fallas-grid-container,
+    #rendimiento .rendimiento-grid-container {
+        grid-template-columns: 1fr;
+        padding: 0 2%;
+    }
+
+    #cuidado .square,
+    #fallas .square,
+    #rendimiento .square {
+        width: 100%;
+    }
+}
+
+#cuidado .square,
+#fallas .square,
+#rendimiento .square {
+    width: 100%;
+    justify-self: center;
+    min-height: 430px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 20px 50px #D9DBDF;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+}
+
+#cuidado .square:hover,
+#fallas .square:hover,
+#rendimiento .square:hover {
+    transform: translate(10px, -10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+#cuidado .mask-box,
+#fallas .mask-box,
+#rendimiento .mask-box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+#cuidado .mask,
+#fallas .mask,
+#rendimiento .mask {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+#cuidado .h1,
+#fallas .h1,
+#rendimiento .h1 {
+    margin: 18px 0 10px 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: 'Frutiger Next', 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+#cuidado .square p,
+#fallas .square p,
+#rendimiento .square p {
+    text-align: justify;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+#cuidado .button,
+#fallas .button,
+#rendimiento .button {
+    background-color: #0080FF;
+    color: #ffffff;
+    width: fit-content;
+    padding: 10px 18px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#cuidado .button:hover,
+#fallas .button:hover,
+#rendimiento .button:hover {
+    background-color: #0066cc;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.site-footer {
+    grid-area: footer;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
