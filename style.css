@@ -577,6 +577,103 @@ section h2:not(.blog-card h2),
 }
 
 /* -------------------------------------------------------------
+   ESTRUCTURA Y DISEÑO DEL ENCABEZADO (2 COLUMNAS: TEXTO + IMAGEN PNG)
+   ------------------------------------------------------------- */
+#encabezado.section-container {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: center;
+    padding: 36px 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+#encabezado .encabezado-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+#encabezado h1 {
+    font-family: 'Frutiger Next', 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+#encabezado .section-text {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #475569;
+    margin: 0;
+}
+
+#encabezado .encabezado-actions {
+    margin-top: 8px;
+}
+
+#encabezado .button-cotizar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25D366;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 50px;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#encabezado .button-cotizar:hover {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+}
+
+#encabezado .encabezado-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#encabezado .encabezado-img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    #encabezado.section-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+    }
+    
+    #encabezado h1 {
+        font-size: 1.85rem;
+    }
+    
+    #encabezado .encabezado-img {
+        max-height: 240px;
+    }
+}
+
+/* -------------------------------------------------------------
    DISEÑO BLOG-CARD (ADAPTADO A SECCIÓN DIAGNÓSTICO Y REPUESTOS)
    ------------------------------------------------------------- */
 #diagnostico .blog-card,
