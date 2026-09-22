@@ -709,11 +709,11 @@ section h2:not(.blog-card h2),
         gap: 24px;
         padding: 28px 20px;
     }
-    
+
     #encabezado h1 {
         font-size: 1.85rem;
     }
-    
+
     #encabezado .encabezado-img {
         max-height: 260px;
     }
@@ -1226,6 +1226,13 @@ section h2:not(.blog-card h2),
 /* -------------------------------------------------------------
    SECCIÓN OTRAS MARCAS CON LOGOS (PÁGINAS DE LAPTOPS)
    ------------------------------------------------------------- */
+#otras-marcas.section-container {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .brand-logos-grid {
     grid-column: 1 / -1;
     display: flex;
@@ -1233,7 +1240,7 @@ section h2:not(.blog-card h2),
     gap: 14px;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 14px;
+    margin-top: 0;
     width: 100%;
 }
 
@@ -1262,7 +1269,7 @@ section h2:not(.blog-card h2),
 }
 
 .brand-logo-img {
-    height: 32px;
+    height: 45px;
     width: auto;
     max-width: 90px;
     object-fit: contain;
