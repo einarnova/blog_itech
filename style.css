@@ -1262,9 +1262,9 @@ section h2:not(.blog-card h2),
 }
 
 .brand-logo-img {
-    height: 26px;
+    height: 32px;
     width: auto;
-    max-width: 75px;
+    max-width: 90px;
     object-fit: contain;
     display: block;
     transition: transform 0.25s ease;
