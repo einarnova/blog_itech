@@ -819,11 +819,13 @@ section h2:not(.blog-card h2),
 }
 
 /* -------------------------------------------------------------
-   SECCIONES CUIDADO, FALLAS Y RENDIMIENTO (DISEÑO .square CARD - 3 COLUMNAS)
+   SECCIONES CUIDADO, FALLAS, RENDIMIENTO Y SERVICIOS (DISEÑO .square CARD - 3 COLUMNAS)
    ------------------------------------------------------------- */
 #cuidado .cuidado-grid-container,
 #fallas .fallas-grid-container,
-#rendimiento .rendimiento-grid-container {
+#rendimiento .rendimiento-grid-container,
+#servicios .cuidado-grid-container,
+.cuidado-grid-container {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -838,14 +840,18 @@ section h2:not(.blog-card h2),
 
     #cuidado .cuidado-grid-container,
     #fallas .fallas-grid-container,
-    #rendimiento .rendimiento-grid-container {
+    #rendimiento .rendimiento-grid-container,
+    #servicios .cuidado-grid-container,
+    .cuidado-grid-container {
         grid-template-columns: repeat(2, 1fr);
         padding: 0 5%;
     }
 
     #cuidado .square,
     #fallas .square,
-    #rendimiento .square {
+    #rendimiento .square,
+    #servicios .square,
+    .square {
         width: 85%;
     }
 }
@@ -854,21 +860,27 @@ section h2:not(.blog-card h2),
 
     #cuidado .cuidado-grid-container,
     #fallas .fallas-grid-container,
-    #rendimiento .rendimiento-grid-container {
+    #rendimiento .rendimiento-grid-container,
+    #servicios .cuidado-grid-container,
+    .cuidado-grid-container {
         grid-template-columns: 1fr;
         padding: 0 2%;
     }
 
     #cuidado .square,
     #fallas .square,
-    #rendimiento .square {
+    #rendimiento .square,
+    #servicios .square,
+    .square {
         width: 100%;
     }
 }
 
 #cuidado .square,
 #fallas .square,
-#rendimiento .square {
+#rendimiento .square,
+#servicios .square,
+.square {
     width: 100%;
     justify-self: center;
     min-height: 430px;
@@ -885,14 +897,18 @@ section h2:not(.blog-card h2),
 
 #cuidado .square:hover,
 #fallas .square:hover,
-#rendimiento .square:hover {
+#rendimiento .square:hover,
+#servicios .square:hover,
+.square:hover {
     transform: translate(10px, -10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 #cuidado .mask-box,
 #fallas .mask-box,
-#rendimiento .mask-box {
+#rendimiento .mask-box,
+#servicios .mask-box,
+.square .mask-box {
     position: relative;
     width: 100%;
     height: 200px;
@@ -901,7 +917,9 @@ section h2:not(.blog-card h2),
 
 #cuidado .mask,
 #fallas .mask,
-#rendimiento .mask {
+#rendimiento .mask,
+#servicios .mask,
+.square .mask {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -912,7 +930,9 @@ section h2:not(.blog-card h2),
 
 #cuidado .h1,
 #fallas .h1,
-#rendimiento .h1 {
+#rendimiento .h1,
+#servicios .h1,
+.square .h1 {
     margin: 18px 0 10px 0;
     padding-left: 24px;
     padding-right: 24px;
@@ -925,7 +945,9 @@ section h2:not(.blog-card h2),
 
 #cuidado .square p,
 #fallas .square p,
-#rendimiento .square p {
+#rendimiento .square p,
+#servicios .square p,
+.square p {
     text-align: justify;
     padding-left: 24px;
     padding-right: 24px;
@@ -938,7 +960,9 @@ section h2:not(.blog-card h2),
 
 #cuidado .button,
 #fallas .button,
-#rendimiento .button {
+#rendimiento .button,
+#servicios .button,
+.square .button {
     background-color: #0080FF;
     color: #ffffff;
     width: fit-content;
@@ -959,7 +983,9 @@ section h2:not(.blog-card h2),
 
 #cuidado .button:hover,
 #fallas .button:hover,
-#rendimiento .button:hover {
+#rendimiento .button:hover,
+#servicios .button:hover,
+.square .button:hover {
     background-color: #0066cc;
     transform: translateY(-2px);
 }
