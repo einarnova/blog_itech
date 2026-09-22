@@ -137,7 +137,7 @@ html {
     z-index: 1100;
 }
 
-.nav-item.has-dropdown:hover > .dropdown-menu {
+.nav-item.has-dropdown:hover>.dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
@@ -156,7 +156,7 @@ html {
 }
 
 .dropdown-link:hover,
-.has-submenu:hover > .dropdown-link {
+.has-submenu:hover>.dropdown-link {
     background-color: #f0f7ff;
     color: #0080FF;
 }
@@ -173,7 +173,7 @@ html {
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.has-submenu:hover > .dropdown-link .submenu-arrow {
+.has-submenu:hover>.dropdown-link .submenu-arrow {
     color: #0080FF;
     transform: translateX(2px);
 }
@@ -197,7 +197,7 @@ html {
     z-index: 1200;
 }
 
-.has-submenu:hover > .submenu {
+.has-submenu:hover>.submenu {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
