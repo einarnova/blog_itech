@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITECH - Servicio Técnico Especializado en Perú</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-body">
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo-link">
+                <img src="https://itech-admin.vercel.app/images/logo.webp" alt="ITECH Logo" class="header-logo">
+            </a>
+            <nav class="header-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Reparaciones <span class="dropdown-arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="has-submenu">
+                                <a href="#" class="dropdown-link">
+                                    Laptops <span class="submenu-arrow">▸</span>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="paginas/laptop-hp.html" class="submenu-link">HP</a></li>
+                                    <li><a href="paginas/laptop-dell.html" class="submenu-link">Dell</a></li>
+                                    <li><a href="paginas/laptop-asus.html" class="submenu-link">Asus</a></li>
+                                    <li><a href="paginas/laptop-lenovo.html" class="submenu-link">Lenovo</a></li>
+                                    <li><a href="paginas/laptop-acer.html" class="submenu-link">Acer</a></li>
+                                    <li><a href="paginas/laptop-apple.html" class="submenu-link">Apple</a></li>
+                                    <li><a href="paginas/laptop-msi.html" class="submenu-link">MSI</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#" class="dropdown-link">
+                                    Celulares <span class="submenu-arrow">▸</span>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="paginas/celular-samsung.html" class="submenu-link">Samsung</a></li>
+                                    <li><a href="paginas/celular-xiaomi.html" class="submenu-link">Xiaomi</a></li>
+                                    <li><a href="paginas/celular-apple.html" class="submenu-link">iPhone (Apple)</a>
+                                    </li>
+                                    <li><a href="paginas/celular-motorola.html" class="submenu-link">Motorola</a></li>
+                                    <li><a href="paginas/celular-honor.html" class="submenu-link">Honor</a></li>
+                                    <li><a href="paginas/celular-oppo.html" class="submenu-link">Oppo</a></li>
+                                    <li><a href="paginas/celular-vivo.html" class="submenu-link">Vivo</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#" class="dropdown-link">
+                                    Impresoras <span class="submenu-arrow">▸</span>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="paginas/impresora-epson.html" class="submenu-link">Epson</a></li>
+                                    <li><a href="paginas/impresora-hp.html" class="submenu-link">HP</a></li>
+                                    <li><a href="paginas/impresora-canon.html" class="submenu-link">Canon</a></li>
+                                    <li><a href="paginas/impresora-brother.html" class="submenu-link">Brother</a></li>
+                                    <li><a href="paginas/impresora-xerox.html" class="submenu-link">Xerox</a></li>
+                                    <li><a href="paginas/impresora-kyocera.html" class="submenu-link">Kyocera</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#" class="dropdown-link">
+                                    Drones <span class="submenu-arrow">▸</span>
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="paginas/drone-dji.html" class="submenu-link">DJI</a></li>
+                                    <li><a href="paginas/drone-autel.html" class="submenu-link">Autel Robotics</a></li>
+                                    <li><a href="paginas/drone-fimi.html" class="submenu-link">Fimi</a></li>
+                                    <li><a href="paginas/drone-hubsan.html" class="submenu-link">Hubsan</a></li>
+                                    <li><a href="paginas/drone-potensic.html" class="submenu-link">Potensic</a></li>
+                                    <li><a href="paginas/drone-syma.html" class="submenu-link">Syma</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://wa.me/51900000000" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+                    <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                        fill="currentColor">
+                        <path
+                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                    </svg>
+                    <span>Contactar</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <h2 class="sidebar-title">Navegación Rápida</h2>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-list">
+                <li class="sidebar-item"><a class="sidebar-link" href="#diagnostico">1. ¿En qué consiste la
+                        reparación?</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#cuidado">2. Recomendaciones y cuidado</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#fallas">3. Fallas más comunes</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#rendimiento">4. Trucos de rendimiento</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#repuestos">5. Guía de repuestos</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="#marcas">6. Marcas comerciales en Perú</a></li>
+            </ul>
+        </nav>
+
+        <!-- Elemento para Anuncios / Publicidad -->
+        <div class="sidebar-ad">
+            <span class="ad-tag">Publicidad</span>
+            <div class="ad-content">
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80"
+                    alt="Anuncio Mantenimiento de Laptops" class="ad-image">
+                <h3 class="ad-title">¡Mantenimiento Preventivo 2x1!</h3>
+                <p class="ad-text">Obtén limpieza profunda y cambio de pasta térmica con descuento exclusivo esta
+                    semana.</p>
+                <a href="https://wa.me/51900000000" target="_blank" rel="noopener noreferrer" class="ad-button">Ver
+                    Promoción</a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <section class="section-container" id="diagnostico">
+            <div class="diagnostico-header">
+                <h2 class="diagnostico-title">1. ¿En qué consiste realmente la reparación de laptops?</h2>
+                <p class="diagnostico-intro">Reparar una laptop no es un proceso único: cambia según si la falla es de
+                    <strong class="diagnostico-bold">software</strong> (sistema operativo dañado, virus, drivers
+                    corruptos, lentitud por falta de mantenimiento) o de <strong
+                        class="diagnostico-bold">hardware</strong> (pantalla, teclado, batería, tarjeta madre, puertos
+                    de carga, ventiladores).
+                </p>
+                <p class="diagnostico-subtitle">Un buen servicio técnico normalmente sigue tres etapas:</p>
+            </div>
+
+            <div class="diagnostico-cards-container">
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url('https://tecnorefacciones.com/wp-content/uploads/2023/05/diagnostico-de-laptop-1024x685.png')">
+                        </div>
+                        <ul class="details">
+                            <li class="author"><a href="#diagnostico">Paso 01</a></li>
+                            <li class="date">Diagnóstico Técnico</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h1>Diagnóstico</h1>
+                        <h2>Paso 01 - Identificación de fallas</h2>
+                        <p>identificar si el problema viene de la fuente de poder, la batería, el disco, la memoria RAM
+                            o algún componente interno mal conectado. Muchas veces lo que parece una falla grave (la
+                            laptop "no prende") es solo un cargador dañado o un puerto flojo.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card alt">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url('https://compumarket.pe/fotos/producto_3886_lg.jpg')"></div>
+                        <ul class="details">
+                            <li class="author"><a href="#diagnostico">Paso 02</a></li>
+                            <li class="date">Cotización y Decisión</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h1>Cotización y decisión</h1>
+                        <h2>Paso 02 - Evaluación costo/beneficio</h2>
+                        <p>comparar el costo de reparar contra el de reemplazar el equipo. Detectar la falla a tiempo
+                            casi siempre resulta más barato que dejar que se agrave.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url('https://i2.wp.com/aprende.com/wp-content/uploads/2021/11/tecnico-electronico-curso-online.jpg?ssl=1')">
+                        </div>
+                        <ul class="details">
+                            <li class="author"><a href="#diagnostico">Paso 03</a></li>
+                            <li class="date">Reemplazo e Intervención</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h1>Reparación o reemplazo de la pieza</h1>
+                        <h2>Paso 03 - Servicio técnico especializado</h2>
+                        <p>desde una limpieza interna y cambio de pasta térmica, hasta el cambio de una pantalla,
+                            teclado, bisagras o la propia placa madre.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="diagnostico-footer">
+                <p class="diagnostico-summary">Hoy en día las laptops reemplazan cada vez más a las PC de escritorio por
+                    su portabilidad y menor costo, pero justamente por estar en constante movimiento y exponerse a
+                    golpes, polvo y líquidos, tienden a fallar con más frecuencia que un equipo fijo. Por eso el
+                    mantenimiento preventivo es tan importante como la reparación correctiva.</p>
+            </div>
+        </section>
+
+        <section class="section-container" id="cuidado">
+            <h2 class="section-title">2. Recomendaciones para cuidar el equipo y alargar su vida útil</h2>
+            <p class="section-text">La vida útil promedio de una laptop ronda entre 3 y 5 años, pero con buenos hábitos
+                se puede extender bastante. Algunas prácticas clave:</p>
+
+            <div class="cuidado-grid-container">
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Ventilación y flujo de aire en laptops sobre superficies duras">
+                    </div>
+                    <div class="h1">Ventilación ante todo</div>
+                    <p>usarla siempre sobre superficies duras y planas. Apoyarla en la cama, el sofá o sobre las piernas
+                        bloquea las rejillas de aire y provoca sobrecalentamiento, uno de los enemigos silenciosos de
+                        los componentes internos.</p>
+                    <div><a href="#cuidado" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Cuidado y mantenimiento de la batería de litio de laptop">
+                    </div>
+                    <div class="h1">Cuidado de la batería</div>
+                    <p>mantener la carga idealmente entre 20% y 80%, evitar dejarla enchufada permanentemente una vez
+                        llega al 100% y no dejar que se descargue por completo con frecuencia. Cargarla en ambientes con
+                        temperaturas altas (más de 30°C) acelera el desgaste de las celdas de litio.</p>
+                    <div><a href="#cuidado" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Limpieza periódica del teclado y pantalla de laptop con microfibra">
+                    </div>
+                    <div class="h1">Limpieza periódica</div>
+                    <p>usar aire comprimido o una brocha suave para el teclado y las rejillas; para la pantalla, un paño
+                        de microfibra apenas humedecido (nunca alcohol ni líquidos químicos, ya que pueden dañar el
+                        recubrimiento antirreflectante).</p>
+                    <div><a href="#cuidado" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Actualización de sistema operativo y controladores de laptop">
+                    </div>
+                    <div class="h1">Actualizaciones al día</div>
+                    <p>mantener actualizados el sistema operativo, los controladores (drivers) y los programas ayuda a
+                        la estabilidad y seguridad del equipo.</p>
+                    <div><a href="#cuidado" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Gestión de almacenamiento interno y respaldos de disco en laptop">
+                    </div>
+                    <div class="h1">Gestión del almacenamiento</div>
+                    <p>eliminar archivos innecesarios, desinstalar programas que no se usan y hacer respaldos periódicos
+                        en la nube o en discos externos.</p>
+                    <div><a href="#cuidado" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Transporte seguro de laptop en mochila o funda acolchada">
+                    </div>
+                    <div class="h1">Transporte protegido</div>
+                    <p>trasladarla apagada o en suspensión, dentro de una funda o mochila con compartimento acolchado,
+                        evitando golpes y sacudidas bruscas (especialmente en equipos con disco duro mecánico en vez de
+                        SSD).</p>
+                    <div><a href="#cuidado" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Revisión técnica anual y mantenimiento preventivo profesional">
+                    </div>
+                    <div class="h1">Revisión técnica anual</div>
+                    <p>aunque el mantenimiento básico se puede hacer en casa, una revisión profesional al menos una vez
+                        al año permite detectar desgaste interno antes de que se convierta en una falla mayor.</p>
+                    <div><a href="#cuidado" class="button">Saber más</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="fallas">
+            <h2 class="section-title">3. Fallas más comunes en laptops</h2>
+
+            <div class="fallas-grid-container">
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Laptop que no enciende o se apaga sola por fallas eléctricas o batería">
+                    </div>
+                    <div class="h1">3.1 La laptop no enciende o se apaga sola</div>
+                    <p>Puede deberse a un cargador o conector de corriente dañado, una batería agotada, la fuente de
+                        poder interna con fallas, o incluso un problema en la placa madre. Antes de asumir lo peor,
+                        conviene probar con otro cargador y verificar el punto de conexión eléctrica.</p>
+                    <div><a href="#fallas" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80"
+                            class="mask"
+                            alt="Sobrecalentamiento de laptop por polvo en ventilador y pasta térmica seca">
+                    </div>
+                    <div class="h1">3.2 Sobrecalentamiento y ventilador ruidoso</div>
+                    <p>El polvo acumulado en el disipador y el desgaste de la pasta térmica hacen que el procesador
+                        trabaje a temperaturas elevadas, lo que provoca apagones repentinos, bajo rendimiento o un
+                        ventilador que suena cada vez más fuerte. La limpieza interna y el cambio de pasta térmica
+                        suelen resolverlo.</p>
+                    <div><a href="#fallas" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Reemplazo de pantalla LCD o LED rota con líneas de colores o parpadeo">
+                    </div>
+                    <div class="h1">3.3 Pantalla rota, con líneas o que parpadea</div>
+                    <p>Golpes, presión excesiva sobre la tapa o simplemente el desgaste del panel pueden causar
+                        fracturas, líneas de colores, parpadeo o que la imagen se oscurezca. En la mayoría de los casos
+                        la solución es el reemplazo completo del panel LCD/LED.</p>
+                    <div><a href="#fallas" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Reparación o cambio de teclado de laptop dañado por derrames de líquidos">
+                    </div>
+                    <div class="h1">3.4 Teclado que falla o no responde</div>
+                    <p>El derrame de líquidos es la causa más frecuente, seguida de la acumulación de suciedad bajo las
+                        teclas y el desgaste natural de las más usadas. Dependiendo del daño, se puede limpiar,
+                        reemplazar teclas individuales o cambiar el teclado completo.</p>
+                    <div><a href="#fallas" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Optimización de lentitud del sistema e instalación de unidad SSD">
+                    </div>
+                    <div class="h1">3.5 Lentitud general del sistema</div>
+                    <p>Casi siempre combina varios factores: poco espacio libre en el disco, memoria RAM insuficiente
+                        para los programas actuales, virus o malware, y demasiados programas iniciando junto con
+                        Windows. Un disco de estado sólido (SSD) suele ser la mejora más notoria en equipos antiguos.
+                    </p>
+                    <div><a href="#fallas" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?auto=format&fit=crop&w=800&q=80"
+                            class="mask"
+                            alt="Reemplazo de batería de laptop desgastada que pierde autonomía rápidamente">
+                    </div>
+                    <div class="h1">3.6 Batería que se agota rápido o el equipo solo funciona conectado</div>
+                    <p>Con el tiempo, las celdas de la batería pierden capacidad de forma natural (puede perder
+                        alrededor de 10% al año). Cuando la autonomía cae drásticamente o el equipo únicamente enciende
+                        con el cargador puesto, generalmente se requiere un reemplazo de batería.</p>
+                    <div><a href="#fallas" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Falla de disco duro mecánico con ruidos extraños y migración a SSD">
+                    </div>
+                    <div class="h1">3.7 Ruidos extraños o el disco "hace clic"</div>
+                    <p>Un chasquido constante suele ser señal de que un disco duro mecánico está fallando y conviene
+                        respaldar la información de inmediato antes de que se pierda, además de programar su reemplazo
+                        por un SSD.</p>
+                    <div><a href="#fallas" class="button">Saber más</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="rendimiento">
+            <h2 class="section-title">4. Trucos prácticos para exprimir el rendimiento de tu laptop</h2>
+
+            <div class="rendimiento-grid-container">
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Liberación de memoria RAM y reinicio semanal de laptop">
+                    </div>
+                    <div class="h1">Reinicia semanalmente</div>
+                    <p>libera la memoria RAM acumulada y corta procesos "colgados" que se van sumando con el uso diario.
+                    </p>
+                    <div><a href="#rendimiento" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+                            class="mask"
+                            alt="Desactivación de programas de inicio automático en Windows para acelerar el arranque">
+                    </div>
+                    <div class="h1">Desactiva programas de inicio innecesarios</div>
+                    <p>muchas apps se configuran para abrir automáticamente con Windows y consumen recursos desde el
+                        primer segundo; desactivarlas agiliza el arranque.</p>
+                    <div><a href="#rendimiento" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80"
+                            class="mask"
+                            alt="Configuración del plan de energía e itinerancia de rendimiento de batería">
+                    </div>
+                    <div class="h1">Ajusta el plan de energía</div>
+                    <p>usar el modo "alto rendimiento" cuando necesitas potencia y "ahorro de energía" cuando trabajas
+                        solo con texto o navegación alarga la autonomía de la batería.</p>
+                    <div><a href="#rendimiento" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80"
+                            class="mask"
+                            alt="Optimización de interfaz gráfica y reducción de efectos visuales en laptop">
+                    </div>
+                    <div class="h1">Reduce efectos visuales</div>
+                    <p>las animaciones y transparencias de la interfaz consumen recursos; desactivarlas mejora la
+                        fluidez, sobre todo en equipos con poca RAM.</p>
+                    <div><a href="#rendimiento" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80"
+                            class="mask"
+                            alt="Uso de base refrigerante y cooling pad para evitar el sobrecalentamiento de laptop">
+                    </div>
+                    <div class="h1">Usa una base refrigerante</div>
+                    <p>en sesiones largas de trabajo o juego, un cooling pad reduce la temperatura interna y previene el
+                        "throttling" (bajón de rendimiento por calor).</p>
+                    <div><a href="#rendimiento" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+                            class="mask" alt="Escaneo y protección con antivirus activo contra malware en laptop">
+                    </div>
+                    <div class="h1">Ten un antivirus activo y actualizado</div>
+                    <p>programa escaneos periódicos; el malware moderno no siempre da señales visibles, pero sí
+                        ralentiza el sistema y compromete la seguridad de tus archivos.</p>
+                    <div><a href="#rendimiento" class="button">Saber más</a></div>
+                </div>
+
+                <div class="square">
+                    <div class="mask-box">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+                            class="mask"
+                            alt="Respaldo periódico de archivos e información importante en la nube o disco externo">
+                    </div>
+                    <div class="h1">Respalda antes de que sea tarde</div>
+                    <p>la nube, un disco externo o ambos. Cuando aparecen señales de falla (ruidos, lentitud repentina,
+                        pantallas de error), el respaldo debe ser lo primero, no lo último.</p>
+                    <div><a href="#rendimiento" class="button">Saber más</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="repuestos">
+            <div class="diagnostico-header">
+                <h2 class="diagnostico-title">5. Repuestos originales, genéricos y OEM: qué elegir en cada caso</h2>
+                <p class="diagnostico-intro">Entender esta diferencia ayuda a explicar mejor a los clientes por qué una
+                    reparación cuesta lo que cuesta:</p>
+            </div>
+
+            <div class="diagnostico-cards-container">
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url('https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <ul class="details">
+                            <li class="author"><a href="#repuestos">Tipo 01</a></li>
+                            <li class="date">Repuestos Originales</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h1>Repuestos originales (de marca)</h1>
+                        <h2>Tipo 01 - Repuestos Oficiales</h2>
+                        <p>fabricados o certificados directamente por el fabricante del equipo. Garantizan
+                            compatibilidad total, mejor durabilidad y mantienen el respaldo de garantía, pero tienen un
+                            costo más alto y, en ciertos modelos, menor disponibilidad en el mercado local.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card alt">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <ul class="details">
+                            <li class="author"><a href="#repuestos">Tipo 02</a></li>
+                            <li class="date">Repuestos OEM</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h1>Repuestos OEM (Original Equipment Manufacturer)</h1>
+                        <h2>Tipo 02 - Calidad Directa</h2>
+                        <p>son piezas fabricadas siguiendo exactamente los planos y especificaciones del fabricante
+                            original, muchas veces por el mismo proveedor que arma la pieza "de marca", pero
+                            comercializada sin el logo. Suelen ofrecer un punto medio muy sólido entre calidad y precio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url('https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <ul class="details">
+                            <li class="author"><a href="#repuestos">Tipo 03</a></li>
+                            <li class="date">Repuestos Genéricos</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <h1>Repuestos genéricos o compatibles</h1>
+                        <h2>Tipo 03 - Opción Económica</h2>
+                        <p>fabricados por terceros para encajar en varios modelos. Su gran ventaja es el precio y la
+                            disponibilidad inmediata, pero la calidad varía mucho según el fabricante; son una opción
+                            razonable para piezas de menor impacto (carcasas, bisagras, cables, algunos teclados), pero
+                            requieren
+                            más
+                            cuidado en componentes críticos como placas, baterías o pantallas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="diagnostico-footer">
+                <p class="diagnostico-summary"><strong class="diagnostico-bold">Recomendación práctica para comunicar a
+                        los
+                        clientes</strong>: en piezas esenciales (placa madre, batería, memoria RAM, pantalla) conviene
+                    priorizar original u OEM certificado; en piezas accesorias (carcasas, bisagras, cables, algunos
+                    conectores) un genérico de buena procedencia es una alternativa válida y más económica. Un repuesto
+                    barato pero de mala calidad puede terminar dañando otros componentes y saliendo más caro que el
+                    original.</p>
+            </div>
+        </section>
+
+        <section class="section-container" id="marcas">
+            <h2 class="section-title">6. Marcas más comerciales en Perú y sus modelos más conocidos</h2>
+            <p class="section-text">El mercado peruano de laptops se mueve principalmente entre cinco marcas grandes,
+                con Lenovo liderando
+                las importaciones en 2026, seguido de HP y ASUS, mientras que Acer se mantiene en cuarto lugar y Apple
+                es la marca que más rápido está creciendo en participación.</p>
+
+            <article class="article-card">
+                <img class="article-img" src="" alt="Laptops de uso general para estudiantes y oficina">
+                <h3 class="article-title">Uso general / estudiantes / oficina</h3>
+                <ul class="article-list">
+                    <li class="article-item"><strong class="item-title">Lenovo</strong> – Líneas IdeaPad (uso
+                        general/estudiantes) y ThinkPad (corporativa, muy
+                        valorada por su durabilidad).</li>
+                    <li class="article-item"><strong class="item-title">HP</strong> – Pavilion (gama media para hogar y
+                        estudio) y Envy/Spectre (gama alta,
+                        diseño premium).</li>
+                    <li class="article-item"><strong class="item-title">ASUS</strong> – Vivobook (uso general y
+                        productividad) y Zenbook (gama alta, delgadas).
+                    </li>
+                    <li class="article-item"><strong class="item-title">Acer</strong> – Aspire (gama económica y media,
+                        muy vendida por su relación
+                        precio-rendimiento).</li>
+                    <li class="article-item"><strong class="item-title">Dell</strong> – Inspiron (uso general) y
+                        Latitude (corporativa).</li>
+                </ul>
+            </article>
+
+            <article class="article-card">
+                <img class="article-img" src=""
+                    alt="Laptops corporativas Lenovo ThinkPad, Dell Latitude y HP EliteBook">
+                <h3 class="article-title">Empresarial / corporativo</h3>
+                <p class="article-text"><strong class="item-title">Lenovo ThinkPad</strong>, <strong
+                        class="item-title">Dell Latitude</strong>, <strong class="item-title">HP
+                        EliteBook/ProBook</strong> son las líneas que más se asocian a durabilidad, seguridad y soporte
+                    técnico en entornos de oficina.</p>
+            </article>
+
+            <article class="article-card">
+                <img class="article-img" src="" alt="Laptops gamer ASUS ROG, Acer Nitro y Lenovo Legion">
+                <h3 class="article-title">Gaming</h3>
+                <ul class="article-list">
+                    <li class="article-item"><strong class="item-title">ASUS</strong> – Líneas ROG y TUF Gaming, muy
+                        demandadas y en crecimiento sostenido en
+                        Perú.</li>
+                    <li class="article-item"><strong class="item-title">Acer</strong> – Nitro, Predator Helios y
+                        Predator Triton, reconocidas por su buena
+                        relación costo-beneficio.</li>
+                    <li class="article-item"><strong class="item-title">HP</strong> – Omen y Pavilion Gaming.</li>
+                    <li class="article-item"><strong class="item-title">Lenovo</strong> – Legion (equilibrio entre
+                        potencia y precio) y Legion Pro (gama alta).
+                    </li>
+                    <li class="article-item"><strong class="item-title">MSI</strong> – Enfocada casi exclusivamente en
+                        el segmento gamer de alto rendimiento.
+                    </li>
+                    <li class="article-item"><strong class="item-title">Razer</strong> – Línea Blade, referente premium
+                        para quienes buscan lo más alto de gama.
+                    </li>
+                </ul>
+                <p class="article-text">Un dato relevante para el negocio: cada vez más profesionales (diseño gráfico,
+                    edición de video,
+                    arquitectura, programación) compran laptops "gamer" como equipo de trabajo por su capacidad gráfica,
+                    lo cual amplía el público que necesita repuestos de gama alta (pantallas de alta tasa de refresco,
+                    tarjetas gráficas dedicadas, sistemas de refrigeración más complejos).</p>
+            </article>
+        </section>
+    </main>
+    <footer class="site-footer">
+    </footer>
+</body>
+
+</html>
