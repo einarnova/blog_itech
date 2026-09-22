@@ -11,7 +11,6 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    border-radius: 8px;
 }
 
 /* Layout Principal a pantalla completa con CSS Grid */
@@ -577,20 +576,20 @@ section h2:not(.blog-card h2),
 }
 
 /* -------------------------------------------------------------
-   ESTRUCTURA Y DISEÑO DEL ENCABEZADO (2 COLUMNAS: TEXTO + IMAGEN PNG)
+   ESTRUCTURA Y DISEÑO DEL ENCABEZADO MINIMALISTA Y AMIGABLE
    ------------------------------------------------------------- */
 #encabezado.section-container {
     min-height: auto;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 32px;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 36px;
     align-items: center;
-    padding: 36px 30px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    padding: 40px 36px;
+    background: linear-gradient(145deg, #f8fafc 0%, #ffffff 100%);
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    margin-bottom: 36px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
 }
 
 #encabezado .encabezado-info {
@@ -598,49 +597,90 @@ section h2:not(.blog-card h2),
     flex-direction: column;
     gap: 16px;
     align-items: flex-start;
+    text-align: left;
 }
 
 #encabezado h1 {
-    font-family: 'Frutiger Next', 'Inter', system-ui, -apple-system, sans-serif;
-    font-size: 2.25rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 2.5rem;
     font-weight: 800;
-    color: #0f172a;
-    line-height: 1.25;
-    letter-spacing: -0.025em;
+    color: #0080FF;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
     margin: 0;
+    text-align: left;
 }
 
 #encabezado .section-text {
     font-size: 1.05rem;
     line-height: 1.65;
     color: #475569;
+    font-weight: 400;
     margin: 0;
+    text-align: left;
 }
 
 #encabezado .encabezado-actions {
-    margin-top: 8px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+    align-self: flex-start;
+    flex-wrap: wrap;
 }
 
+#encabezado .button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #00A3FF 0%, #0080FF 100%);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 14px rgba(0, 128, 255, 0.35);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#encabezado .button-primary:hover {
+    background: linear-gradient(135deg, #0092e6 0%, #0070e0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 128, 255, 0.45);
+}
+
+#encabezado .button-whatsapp,
 #encabezado .button-cotizar {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     background-color: #25D366;
     color: #ffffff;
     font-size: 0.95rem;
     font-weight: 700;
     text-decoration: none;
-    padding: 12px 26px;
+    padding: 12px 24px;
     border-radius: 50px;
-    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+#encabezado .button-whatsapp:hover,
 #encabezado .button-cotizar:hover {
     background-color: #20ba5a;
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.45);
+}
+
+#encabezado .button-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 #encabezado .encabezado-media {
@@ -652,16 +692,22 @@ section h2:not(.blog-card h2),
 
 #encabezado .encabezado-img {
     width: 100%;
-    max-height: 320px;
-    object-fit: cover;
-    border-radius: 12px;
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+#encabezado .encabezado-img:hover {
+    transform: translateY(-3px);
 }
 
 @media (max-width: 900px) {
     #encabezado.section-container {
         grid-template-columns: 1fr;
         gap: 24px;
-        padding: 24px;
+        padding: 28px 20px;
     }
     
     #encabezado h1 {
@@ -669,7 +715,7 @@ section h2:not(.blog-card h2),
     }
     
     #encabezado .encabezado-img {
-        max-height: 240px;
+        max-height: 260px;
     }
 }
 
@@ -982,12 +1028,12 @@ section h2:not(.blog-card h2),
     justify-self: center;
     min-height: 430px;
     background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0px 20px 50px #D9DBDF;
-    transition: all 0.3s ease;
+    border-radius: 18px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #f1f5f9;
     display: flex;
     flex-direction: column;
 }
@@ -997,8 +1043,9 @@ section h2:not(.blog-card h2),
 #rendimiento .square:hover,
 #servicios .square:hover,
 .square:hover {
-    transform: translate(10px, -10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 128, 255, 0.1);
+    border-color: #e2e8f0;
 }
 
 #cuidado .mask-box,
@@ -1008,7 +1055,7 @@ section h2:not(.blog-card h2),
 .square .mask-box {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 190px;
     overflow: hidden;
 }
 
@@ -1018,11 +1065,16 @@ section h2:not(.blog-card h2),
 #servicios .mask,
 .square .mask {
     width: 100%;
-    height: 200px;
+    height: 190px;
     object-fit: cover;
     display: block;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    transition: transform 0.35s ease;
+}
+
+.square:hover .mask {
+    transform: scale(1.04);
 }
 
 #cuidado .h1,
@@ -1033,8 +1085,8 @@ section h2:not(.blog-card h2),
     margin: 18px 0 10px 0;
     padding-left: 24px;
     padding-right: 24px;
-    font-family: 'Frutiger Next', 'Inter', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #0f172a;
     line-height: 1.3;
@@ -1045,11 +1097,11 @@ section h2:not(.blog-card h2),
 #rendimiento .square p,
 #servicios .square p,
 .square p {
-    text-align: justify;
+    text-align: left;
     padding-left: 24px;
     padding-right: 24px;
     font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: #64748b;
     line-height: 1.6;
     flex-grow: 1;
@@ -1063,8 +1115,8 @@ section h2:not(.blog-card h2),
     background-color: #0080FF;
     color: #ffffff;
     width: fit-content;
-    padding: 10px 18px;
-    border-radius: 3px;
+    padding: 10px 22px;
+    border-radius: 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -1075,7 +1127,8 @@ section h2:not(.blog-card h2),
     font-weight: 600;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 128, 255, 0.2);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #cuidado .button:hover,
@@ -1085,6 +1138,89 @@ section h2:not(.blog-card h2),
 .square .button:hover {
     background-color: #0066cc;
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 128, 255, 0.35);
+}
+
+/* -------------------------------------------------------------
+   SECCIÓN PREGUNTAS FRECUENTES (FAQ ACCORDION - 1 POR FILA)
+   ------------------------------------------------------------- */
+#preguntas-frecuentes.section-container {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.faq-item[open] {
+    border-color: #b3d9ff;
+    box-shadow: 0 4px 16px rgba(0, 128, 255, 0.08);
+}
+
+.faq-question {
+    padding: 18px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0080FF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    list-style: none;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.faq-question::-webkit-details-marker,
+.faq-question::marker {
+    display: none;
+}
+
+.faq-question:hover {
+    background-color: #f8fafc;
+}
+
+.faq-icon {
+    width: 20px;
+    height: 20px;
+    color: #0080FF;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 24px 20px 24px;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 4px;
+}
+
+.faq-answer p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #475569;
+    margin: 12px 0 0 0;
 }
 
 /* Footer */
